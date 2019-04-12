@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main(){
+   int resp;
+   int vitoria_g;
+   int vitoria_i;
+   int gol_g;
+   int gol_i;
+   int empates;
+   int grenais;
+
+   printf("Digite o resultado da partida: \n");
+   printf("\nGremio: ");
+   printf("\nInternacional: \n");
+   scanf("%d",&gol_g);
+   scanf("%d",&gol_i);
+
+   grenais =1;
+
+   printf("Novo Grenal?\n ");
+   printf("1- Sim    2- Nao\n");
+   scanf("%d", &resp);
+
+   while(resp == 1){
+
+
+   printf("Digite o resultado da partida: \n");
+   printf("\nGremio: ");
+   printf("\nInternacional: \n");
+   scanf("%d",&gol_g);
+   scanf("%d",&gol_i);
+
+
+   if (gol_g > gol_i){
+        vitoria_g = vitoria_g + 1;
+   }
+   else{
+        if (gol_g == gol_i){
+            empates = empates + 1;
+        }
+        else{
+                vitoria_i = vitoria_i + 1;
+        }
+   }
+   grenais = grenais + 1;
+
+    printf("Novo Grenal?\n ");
+   printf("1- Sim    2- Nao\n");
+   scanf("%d", &resp);
+
+   }
+
+   printf("\n%d grenais\n", grenais);
+   printf("inter: %d\n", vitoria_i);
+   printf("gremio: %d\n", vitoria_g);
+   printf("empates: %d\n", empates);
+
+return 0;
+}
